@@ -10,11 +10,25 @@
     //Calcule e apresente o preço final do Veículo de acordo com o seu respectivo ano.
 
     //ENTRADA
+    const precoVeiculo = Number(prompt("Informe o preço total do veículo:"));
+    const anoVeiculo = Number(prompt("Informe o ano do veículo:"));
 
+    let mensagemFinal;
 
     //PROCESSAMENTO
+    switch(anoVeiculo){
+        case 2010:
+        mensagemFinal = precoVeiculo + (precoVeiculo * 3/100);
+        break;
+        case 2020:
+        mensagemFinal = precoVeiculo + (precoVeiculo * 5/100);
+        break;
+        default:
+        mensagemFinal = precoVeiculo + (precoVeiculo * 7/100);
+        break;
+    }
 
 
     //SAÍDA
-
+    document.write(mensagemFinal);
 </script>

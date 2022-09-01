@@ -10,12 +10,12 @@
     //Apresente o preço final do caminhão, considerando o juro estabelecido para a quantidade de parcelas.
 
     //ENTRADA
-    const precoCaminhao = Number(prompt("Informe o preço do caminhão que deseja comprar:")).toFixed(2);
-    const parcelas = Number(prompt("Informe o numero de parcelas que deseja financiar:")).toFixed(0);
+    const precoCaminhao = Number(prompt("Informe o preço do caminhão que deseja comprar:"));
+    const parcelas = Number(prompt("Informe o numero de parcelas que deseja financiar:"));
     let mensagemFinal;
 
     //PROCESSAMENTO
-    mensagemFinal = (parcelas <= 60) ? `O caminhão custara R$${precoCaminhao + (precoCaminhao * 18/100)}` : `O caminhão custara R$${precoCaminhao + (precoCaminhao * 30/100)}`: `O caminhão custara R$${precoCaminhao + (precoCaminhao * 45/100)}`;
+    mensagemFinal = (parcelas <= 60) ? `O caminhão custara R$${precoCaminhao + (precoCaminhao * 18/100)}` : (parcelas <= 96) ? `O caminhão custara R$${precoCaminhao + (precoCaminhao * 30/100)}`: `O caminhão custara R$${precoCaminhao + (precoCaminhao * 45/100)}`;
 
     //SAÍDA
     document.write(mensagemFinal);

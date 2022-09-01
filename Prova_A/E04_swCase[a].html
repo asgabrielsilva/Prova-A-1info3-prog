@@ -12,11 +12,24 @@
     //DICA: Use PR para Programação, DW para Desenvolvimento Web, BD para Banco de Dados.
 
     //ENTRADA
-
+    const disciplina = prompt("Informe a disciplina que deseja se matricular: PR-Programação, DW-Desenvolvimento Web e BD-Banco de Dados.").toUpperCase();
+    let mensagemFinal;
 
     //PROCESSAMENTO
+    switch (disciplina){
+        case ("PR"):
+            mensagemFinal = "Corajoso(a)";
+            break;
+        case ("DW"):
+        mensagemFinal = "Ousado(a)"
+        break;
+        case ("BD"):
+            mensagemFinal = "Confiante";
+            break;
+        default:mensagemFinal = "Disciplina inválida";
+    }
 
 
     //SAÍDA
-
+    document.write(mensagemFinal);
 </script>
